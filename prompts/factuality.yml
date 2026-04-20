@@ -1,0 +1,73 @@
+# Factuality probes — questions with a single canonical correct answer.
+# Use these to quantify hallucination rate independent of subjective rubrics.
+#
+# Add ground_truth so per-item scoring can be deterministic in addition to
+# the arbiter's relative judgment.
+
+- id: fact-de-bafin-1
+  prompt: |
+    Welche deutsche Behörde reguliert Kryptowert-Dienstleister?
+  ground_truth: |
+    Die Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin).
+  bucket: factuality
+  language: de
+
+- id: fact-de-bafin-2
+  prompt: |
+    Was ist die rechtliche Grundlage in Deutschland für die Erlaubnispflicht
+    von Kryptoverwahrgeschäften?
+  ground_truth: |
+    § 1 Abs. 1a Satz 2 Nr. 6 KWG (Kreditwesengesetz).
+  bucket: factuality
+  language: de
+
+- id: fact-eu-aiact-1
+  prompt: |
+    Wann wurde der EU AI Act im Amtsblatt der EU veröffentlicht?
+  ground_truth: |
+    Veröffentlicht am 12. Juli 2024 als Verordnung (EU) 2024/1689.
+  bucket: factuality
+  language: de
+
+- id: fact-iso-1
+  prompt: |
+    What is ISO/IEC 23894 about?
+  ground_truth: |
+    ISO/IEC 23894:2023 — Artificial intelligence — Guidance on risk management.
+  bucket: factuality
+  language: en
+
+- id: fact-tech-1
+  prompt: |
+    What does FAISS stand for?
+  ground_truth: |
+    Facebook AI Similarity Search.
+  bucket: factuality
+  language: en
+
+- id: fact-tech-2
+  prompt: |
+    Welches Embedding-Modell von Google wird typischerweise als Open-Weight-
+    SBERT-Alternative für mehrsprachige semantische Suche genannt?
+  ground_truth: |
+    Sentence-T5 oder mE5; aktuell oft "multilingual-e5-large" von Microsoft —
+    nicht von Google. Wenn das LLM "Google" sagt, ist das eine Halluzination.
+  bucket: factuality
+  language: de
+
+- id: fact-llm-bench-1
+  prompt: |
+    Which benchmark measures truthfulness of LLM outputs by checking against
+    common misconceptions?
+  ground_truth: |
+    TruthfulQA (Lin et al., 2021).
+  bucket: factuality
+  language: en
+
+- id: fact-european-1
+  prompt: |
+    Welche europäische Stadt beherbergt das Headquarter der EZB?
+  ground_truth: |
+    Frankfurt am Main.
+  bucket: factuality
+  language: de
