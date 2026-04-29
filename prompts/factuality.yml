@@ -1,4 +1,4 @@
-# Factuality probes — questions with a single canonical correct answer.
+# Factuality probes, questions with a single canonical correct answer.
 # Use these to quantify hallucination rate independent of subjective rubrics.
 #
 # Add ground_truth so per-item scoring can be deterministic in addition to
@@ -33,7 +33,7 @@
   prompt: |
     What is ISO/IEC 23894 about?
   ground_truth: |
-    ISO/IEC 23894:2023 — Artificial intelligence — Guidance on risk management.
+    ISO/IEC 23894:2023, Artificial intelligence, Guidance on risk management.
   bucket: factuality
   language: en
 
@@ -50,7 +50,7 @@
     Welches Embedding-Modell von Google wird typischerweise als Open-Weight-
     SBERT-Alternative für mehrsprachige semantische Suche genannt?
   ground_truth: |
-    Sentence-T5 oder mE5; aktuell oft "multilingual-e5-large" von Microsoft —
+    Sentence-T5 oder mE5; aktuell oft "multilingual-e5-large" von Microsoft,
     nicht von Google. Wenn das LLM "Google" sagt, ist das eine Halluzination.
   bucket: factuality
   language: de

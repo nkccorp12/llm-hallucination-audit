@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite as below."
+title: "LLM Hallucination Audit"
+abstract: "Public reference implementation for LLM hallucination evaluation: adversarial prompts, multi-LLM arbiter, factuality scoring."
+authors:
+  - family-names: "Bäumler"
+    given-names: "Fabian"
+    affiliation: "DeepThink AI"
+    website: "https://think-agents.ai"
+url: "https://github.com/nkccorp12/llm-hallucination-audit"
+license: MIT
+keywords:
+  - LLM
+  - Hallucination
+  - Evaluation
+  - RAG
+  - AI Audit
+  - Anthropic Claude
+  - OpenAI
+date-released: 2026-04-30
+version: "0.1.0"

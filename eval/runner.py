@@ -1,4 +1,4 @@
-"""Multi-LLM audit runner — minimal, hackable.
+"""Multi-LLM audit runner: minimal, hackable.
 
 Sends each prompt in a YAML test set to N model providers in parallel,
 returns a 4-column DataFrame (prompt_id, provider, response, latency_ms).
@@ -22,7 +22,7 @@ from dataclasses import dataclass
 from typing import Callable
 
 
-# ── Provider adapters ──────────────────────────────────────────────────────
+# Provider adapters
 
 
 def _gpt(prompt: str) -> str:

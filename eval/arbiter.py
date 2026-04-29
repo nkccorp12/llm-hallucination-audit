@@ -32,7 +32,7 @@ The original question was:
 > {question}
 
 You will see N candidate answers labeled Answer A, Answer B, … Score each
-candidate independently on these four dimensions, on a 1–5 integer scale:
+candidate independently on these four dimensions, on a 1 to 5 integer scale:
 
 1. **faithfulness**: does the answer accurately reflect the source material
    provided in the question? (5 = exact, 1 = invents content)
@@ -43,7 +43,7 @@ candidate independently on these four dimensions, on a 1–5 integer scale:
    with claims none of the others make)
 4. **refusal_appropriate**: did the answer refuse when it should have, or
    answer when it should have? (5 = right call, 1 = wrong call,
-   3 = N/A — only use 3 when refusal is not relevant)
+   3 = N/A, only use 3 when refusal is not relevant)
 
 Output STRICT JSON of shape:
 
@@ -93,7 +93,7 @@ def arbitrate(
     """Run one arbitration pass on a single prompt's N candidates."""
     if arbiter_provider in candidates:
         raise ValueError(
-            f"arbiter '{arbiter_provider}' is also a candidate — "
+            f"arbiter '{arbiter_provider}' is also a candidate, "
             "rotate the arbiter so it does not score its own output"
         )
 
